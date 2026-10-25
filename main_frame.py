@@ -2,15 +2,12 @@ import os
 import shutil
 import platform
 import wx
-
 from files_panel import FilePanel
 
 class MainFrame(wx.Frame):
 
     def __init__(self):
-        super().__init__(
-            None, title="wxCommander", size=(1000, 600)
-        )
+        super().__init__(None, title="wxCommander", size=(1000, 600))
 
         # Главный контейнер
         main_sizer = wx.BoxSizer(wx.VERTICAL)

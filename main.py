@@ -1,6 +1,3 @@
-import os
-import shutil
-import platform
 import wx
 
 from main_frame import MainFrame

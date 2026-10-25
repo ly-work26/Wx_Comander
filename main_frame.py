@@ -16,10 +16,8 @@ class MainFrame(wx.Frame):
         splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
 
         # Стартовые директории
-        start_dir = os.path.expanduser("~")
-
-        self.left_panel = FilePanel(splitter, start_dir)
-        self.right_panel = FilePanel(splitter, start_dir)
+        self.left_panel = FilePanel(splitter, os.path.expanduser("."))
+        self.right_panel = FilePanel(splitter, os.path.expanduser("~"))
 
         # Разделяем окно пополам (500 пикселей)
         splitter.SplitVertically(self.left_panel, self.right_panel, 500)
